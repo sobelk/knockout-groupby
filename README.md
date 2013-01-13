@@ -51,7 +51,7 @@ Model = {
             'Species': "Candy"
         },
         {
-            'Name': "Finn",
+            'Name': "Peppermint Butler",
             'Species': "Candy"
         }
     ]
