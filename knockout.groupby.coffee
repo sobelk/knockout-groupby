@@ -10,7 +10,7 @@ ko.bindingHandlers.groupby =
             if groups[key] is undefined
                 groups[key] = [obj]
             else
-                groups[key].push obj
+                groups[key].push(obj)
 
         keys = (key for key of groups)
 
