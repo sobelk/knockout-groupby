@@ -21,7 +21,7 @@ Parameters
     </dd>
     
     <dt>sort</dt>
-    <dd>optional</dd>
+    <dd>*optional*</dd>
     <dd>
         the ordering of items is preserved within a group,
         but the ordering of keys is not guaranteed unless you supply
@@ -60,7 +60,7 @@ Model = {
 ko.applyBindings(Model);
 ```
 
-Present characters groups by species with the following template. 
+Present characters grouped by species with the following template. 
 
 ```html
 <div data-bind="
