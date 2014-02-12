@@ -6,7 +6,12 @@
         _this = this;
       bindingValue = ko.utils.unwrapObservable(valueAccessor());
       groups = {};
-      _ref = bindingValue.group;
+      if (ko.isObservable(bindingValue.group) &&
+          bindingValue.group.hasOwnProperty('remove')) {
+        _ref = bindingValue.group();
+      }	else {
+        _ref = bindingValue.group;
+      }
       for (_i = 0, _len = _ref.length; _i < _len; _i++) {
         obj = _ref[_i];
         key = bindingValue.by(obj);
@@ -19,7 +24,7 @@
       keys = (function() {
         var _results;
         _results = [];
-        for (key in groups) {
+        for (var key in groups) {
           _results.push(key);
         }
         return _results;
